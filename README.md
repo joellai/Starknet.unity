@@ -37,7 +37,7 @@ In any script, use a static class `StarknetBridge` to access the required method
 
 ## Contributors
 |        |Detail|
-|----------------|-------------------------------|-----------------------------|
+|----------------|-------------------------------|
 |[@iLAYER](https://github.com/iLAYER-ORG)|The organizer|
 |[@Joel Lai](https://github.com/joellai) |Unity script coding and overwrite Starknet API       |    
 |[@Bill Lee](https://github.com/tgyf007)|Starknet RPC request and response digging      |
