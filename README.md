@@ -1,4 +1,8 @@
+<p align="center">
+  <img src="/Documentation/Image/logo.png" alt="Starknet.unity logo" width="200px"/>
+</p>
 # Starknet.unity
+
 
 This project is a package for unity, it provides the CSharp with the Starknet interaction capability .
 - Easy to use like Starknet.js
