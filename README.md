@@ -38,15 +38,16 @@ In any script, use a static class `StarknetBridge` to access the required method
 
 ## Updating Road Map
 
-| Milestone                       | Detail                                                                    | Status |
-| ------------------------------- | ------------------------------------------------------------------------- | ------ |
-| Basic Account Created           | Generate the key pair and relative contract address                       | ✔️     |
-| Generate Deploy Signatures      | Create the relative signature for deploying new account                   | ✔️     |
+| Milestone                       | Detail                                                                        | Status |
+| ------------------------------- | ----------------------------------------------------------------------------- | ------ |
+| Basic Account Created           | Generate the key pair and relative contract address                           | ✔️     |
+| Generate Deploy Signatures      | Create the relative signature for deploying new account                       | ✔️     |
 | Support the new ARGENT protocal | Update the new call data structure (**Sep/18/2023**) to correct the signature | ✔️     |
-| Deploy the Account on Chain     | Use the csharp script to deploy the created account                       | 🚧     |
-| Generate Transaction signatures | Generate transaction signatures for calling contract                      | 🚧     |
-| Relative RPC handlers           | Make the request from CSharp side                                         | 🚧     |
-| TBD                             | TBD                                                                       | TBD    |
+| Android Support                 | Support the Android Build                                                     | ✔️     |
+| Deploy the Account on Chain     | Use the csharp script to deploy the created account                           | 🚧     |
+| Generate Transaction signatures | Generate transaction signatures for calling contract                          | 🚧     |
+| Relative RPC handlers           | Make the request from CSharp side                                             | 🚧     |
+| TBD                             | TBD                                                                           | TBD    |
 
 ## Contributors
 
