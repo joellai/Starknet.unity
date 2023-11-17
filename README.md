@@ -47,8 +47,8 @@ In any script, use a static class `StarknetBridge` to access the required method
 | Deploy the Account on Chain     | Use the csharp script to deploy the created account                           | ✔️     |
 | Generate Transaction signatures | Generate transaction signatures for calling contract                          | ✔️     |
 | Relative RPC handlers           | Make the request from CSharp side                                             | ✔️     |
-| Example Added                   | The example for make transaction                                              | 🚧     |
-| IOS Support                     | Support the IOS Build                                                         |  🚧    |
+| Example Added                   | The example for make transaction                                              | ✔️     |
+| IOS Support                     | Support the IOS Build                                                         |  ✔️    |
 
 ## Contributors
 
