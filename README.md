@@ -44,10 +44,11 @@ In any script, use a static class `StarknetBridge` to access the required method
 | Generate Deploy Signatures      | Create the relative signature for deploying new account                       | ✔️     |
 | Support the new ARGENT protocal | Update the new call data structure (**Sep/18/2023**) to correct the signature | ✔️     |
 | Android Support                 | Support the Android Build                                                     | ✔️     |
-| Deploy the Account on Chain     | Use the csharp script to deploy the created account                           | 🚧     |
-| Generate Transaction signatures | Generate transaction signatures for calling contract                          | 🚧     |
-| Relative RPC handlers           | Make the request from CSharp side                                             | 🚧     |
-| TBD                             | TBD                                                                           | TBD    |
+| Deploy the Account on Chain     | Use the csharp script to deploy the created account                           | ✔️     |
+| Generate Transaction signatures | Generate transaction signatures for calling contract                          | ✔️     |
+| Relative RPC handlers           | Make the request from CSharp side                                             | ✔️     |
+| Example Added                   | The example for make transaction                                              | 🚧     |
+| IOS Support                     | Support the IOS Build                                                         |  🚧    |
 
 ## Contributors
 
