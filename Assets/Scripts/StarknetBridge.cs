@@ -6,11 +6,17 @@ using UnityEngine;
 
 public static class StarknetBridge
 {
+#if !UNITY_EDITOR && (UNITY_IOS || UNITY_WEBGL)
+    private const string dllName = "__Internal";
+#else
+    private const string dllName = "starknet_bridge";
+#endif
+    
     /// <summary>
     /// This method auto generate private key and public key
     /// </summary>
     /// <returns>Bigint String</returns>
-    [DllImport("starknet_bridge")]
+    [DllImport(dllName)]
     public static extern KeyPair generate_key_pair();
 
     /// <summary>
@@ -19,7 +25,7 @@ public static class StarknetBridge
     /// </summary>
     /// <param name="public_key">It must be hex, like "0xsdkhf54iu45..."</param>
     /// <returns>Bigint string</returns>
-    [DllImport("starknet_bridge")]
+    [DllImport(dllName)]
     public static extern string get_contract_address(string public_key);
 
     /// <summary>
@@ -28,7 +34,7 @@ public static class StarknetBridge
     /// <param name="input">The relative fields like public key and private key must be lower case hex string, like "0xsdkhf54iu45...",
     /// more info please check example
     /// <returns>Signatures</returns>
-    [DllImport("starknet_bridge")]
+    [DllImport(dllName)]
     public static extern Signatures get_deploy_account_signature(SignatureAccountDeployInput input);
 
     /// <summary>
@@ -38,7 +44,7 @@ public static class StarknetBridge
     /// more info please check example
     /// </param>
     /// <returns>Signatures</returns>
-    [DllImport("starknet_bridge")]
+    [DllImport(dllName)]
     public static extern Signatures get_general_signature(SignatureInput input, IntPtr[] strings, int count, string selector);
 
 
