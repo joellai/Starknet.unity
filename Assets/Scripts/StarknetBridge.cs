@@ -11,41 +11,31 @@ public static class StarknetBridge
 #else
     private const string dllName = "starknet_bridge";
 #endif
-    
-    /// <summary>
-    /// This method auto generate private key and public key
-    /// </summary>
-    /// <returns>Bigint String</returns>
+
     [DllImport(dllName)]
     public static extern KeyPair generate_key_pair();
 
-    /// <summary>
-    /// This method to generate user contract address, 
-    /// for now, you should put the generated public key to generate relative contract address
-    /// </summary>
-    /// <param name="public_key">It must be hex, like "0xsdkhf54iu45..."</param>
-    /// <returns>Bigint string</returns>
     [DllImport(dllName)]
-    public static extern string get_contract_address(string public_key);
+    public static extern string get_argent_contract_address(string public_key, string classHash);
 
-    /// <summary>
-    /// This method is to get the signaturse for deploy the new account on Starknet test chain
-    /// </summary>
-    /// <param name="input">The relative fields like public key and private key must be lower case hex string, like "0xsdkhf54iu45...",
-    /// more info please check example
-    /// <returns>Signatures</returns>
     [DllImport(dllName)]
-    public static extern Signatures get_deploy_account_signature(SignatureAccountDeployInput input);
+    public static extern Signatures get_argent_deploy_account_signature(SignatureDeployInput input,
+        int chain_int_id);
 
-    /// <summary>
-    /// This method is to get the signatures for make transaction
-    /// </summary>
-    /// <param name="input">The relative fields like public key and private key must be lower case hex string, like "0xsdkhf54iu45...",
-    /// more info please check example
-    /// </param>
-    /// <returns>Signatures</returns>
     [DllImport(dllName)]
-    public static extern Signatures get_general_signature(SignatureInput input, IntPtr[] strings, int count, string selector);
+    public static extern string get_open_zeppelin_contract_address(string public_key, string classHash);
 
+    // 1 = Main net, 2 = Test Net(deprecate), 3 = Test Net2(deprecate), 4 = Katana,5 = Sepolia default is Sepolia
+    [DllImport(dllName)]
+    public static extern Signatures get_open_zeppelin_deploy_account_signature(SignatureDeployInput input,
+        int chain_int_id, string classHash);
 
+    [DllImport(dllName)]
+    public static extern Signatures get_general_signature(SignatureInput input, IntPtr[] strings, int count,
+        string selector, int cairoVersion, int chainId);
+    
+    // [DllImport(dllName)] (deprecate)
+    // public static extern Signatures get_estimate_fee_sig(SignatureInput input, IntPtr[] strings, int count,
+    //     string selector, int cairoVersion, int chainId);
 }
+
