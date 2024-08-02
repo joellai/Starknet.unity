@@ -76,7 +76,7 @@ In the example, a simple chain manager is implemented, there are two main core d
 
 |                                          | Detail                                         |
 | ---------------------------------------- | ---------------------------------------------- |
-| [@XAR](https://github.com/iLAYER-ORG) | The organizer                                  |
+| [@XAR](https://github.com/xarlabs) | The organizer                                  |
 | [@Joel Lai](https://github.com/joellai)  | Unity script coding and overwrite Starknet API |
 | [@Bill Lee](https://github.com/tgyf007)  | Starknet RPC request and response digging      |
 
